@@ -15,8 +15,8 @@ obj/main.o: obj/shader_constants.h main.c
 	$(CC) $(FLAGS) $(INCLUDES) -o $@ -c $(CFLAGS) $^ 
 
 obj/shader_constants.h: shaders/vertex.glsl shaders/fragment.glsl
-	bash -c "xxd -i shaders/vertex.glsl | tac | sed '3s/$$/, 0x00/' | tac > shader_constants.h"
-	bash -c "xxd -i shaders/fragment.glsl | tac | sed '3s/$$/, 0x00/' | tac >> shader_constants.h"
+	bash -c "xxd -i shaders/vertex.glsl | tac | sed '3s/$$/, 0x00/' | tac > obj/shader_constants.h"
+	bash -c "xxd -i shaders/fragment.glsl | tac | sed '3s/$$/, 0x00/' | tac >> obj/shader_constants.h"
 
 obj/glad.o: obj/shader_constants.h lib/headers/glad.c
 	$(CC) $(FLAGS) $(INCLUDES) -c $(CFLAGS) $^  -o $@
