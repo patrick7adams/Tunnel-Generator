@@ -1,7 +1,7 @@
 # Tunnel-Generator
 
 ## Screenshots
-![Tunnel](https://cdn.discordapp.com/attachments/769583540147847252/1108104795774005299/Screenshot_20230516_155113.png)
+![Tunnel](https://github.com/patrick7adams/Tunnel-Generator/blob/master/tunnel.png)
 
 _TUNNEL!!!_
 ## Features
